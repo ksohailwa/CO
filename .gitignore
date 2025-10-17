@@ -1,0 +1,33 @@
+# Node & package managers
+node_modules/
+.pnpm-debug.log*
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Build outputs
+dist/
+build/
+.out/
+.vite/
+
+# Env files
+.env
+.env.local
+.env.*.local
+
+# Editor & OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# TypeScript
+*.tsbuildinfo
+
+# Logs
+logs/
+*.log
+
+# Optional: Git LFS metadata (if you use LFS)
+.gitattributes
