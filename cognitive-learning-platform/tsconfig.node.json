@@ -1,0 +1,12 @@
+// --- START OF FILE tsconfig.node.json ---
+{
+  "compilerOptions": {
+    "composite": true,
+    "skipLibCheck": true,
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "allowSyntheticDefaultImports": true
+  },
+  "include": ["vite.config.ts", "tailwind.config.ts", "postcss.config.js"]
+}
+// --- END OF FILE tsconfig.node.json ---

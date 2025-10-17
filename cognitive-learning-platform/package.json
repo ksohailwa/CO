@@ -1,0 +1,13 @@
+{
+  "name": "cognitive-learning-platform",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev:server": "nodemon",
+    "dev:client": "vite",
+    "dev": "concurrently \"npm:dev:server\" \"npm:dev:client\"",
+    "build": "tsc && vite build",
+    "start": "node dist/server/index.js"
+  }
+}

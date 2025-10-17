@@ -1,0 +1,39 @@
+// --- START OF FILE tsconfig.json ---
+{
+  "compilerOptions": {
+    // --- Project Settings ---
+    "target": "ESNext", // Compile to the latest JavaScript features
+    "module": "ESNext", // Use modern module syntax
+    "jsx": "react-jsx", // Use the new JSX transform
+    "noEmit": true, // We let Vite/esbuild handle emitting files, tsc only type-checks
+    "isolatedModules": true, // Ensures each file can be compiled independently
+
+    // --- Strictness & Code Quality ---
+    "strict": true, // Enable all strict type-checking options
+    "noUnusedLocals": true, // Report errors on unused local variables
+    "noUnusedParameters": true, // Report errors on unused parameters
+    "noFallthroughCasesInSwitch": true, // Report errors for fallthrough cases in switch statements
+
+    // --- Module Resolution ---
+    "moduleResolution": "bundler", // Aligns with modern bundlers like Vite
+    "resolveJsonModule": true, // Allows importing .json files
+    "allowImportingTsExtensions": true,
+    "baseUrl": ".", // Base directory for path aliases
+    "paths": {
+      // Path aliases for clean imports across the monorepo
+      "@shared/*": ["./shared/*"]
+    },
+    "types": ["vite/client"], 
+
+    // --- Interoperability ---
+    "esModuleInterop": true, // Enables compatibility with CommonJS modules
+    "skipLibCheck": true, // Skip type checking of declaration files
+    "allowSyntheticDefaultImports": true, // Often useful alongside esModuleInterop
+    "forceConsistentCasingInFileNames": true
+  },
+  "include": ["client/src/**/*.ts", "client/src/**/*.tsx", "server/**/*.ts", "shared/**/*.ts"],
+  "exclude": ["node_modules"],
+  "references": [{ "path": "./tsconfig.node.json" }] // Add reference for Vite config
+}
+
+// --- END OF FILE tsconfig.json ---
